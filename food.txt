@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Food Delivery</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .menu { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
+        .item { border: 1px solid #ddd; padding: 10px; width: 200px; }
+    </style>
+</head>
+<body>
+    <h2>Order Delicious Food Online</h2>
+    <div class="menu">
+        <div class="item">
+            <h3>Pizza</h3>
+            <p>$8</p>
+            <button onclick="orderFood('Pizza', 8)">Order</button>
+        </div>
+        <div class="item">
+            <h3>Burger</h3>
+            <p>$5</p>
+            <button onclick="orderFood('Burger', 5)">Order</button>
+        </div>
+        <div class="item">
+            <h3>Pasta</h3>
+            <p>$7</p>
+            <button onclick="orderFood('Pasta', 7)">Order</button>
+        </div>
+    </div>
+
+    <h3>Your Order:</h3>
+    <p id="orderDetails"></p>
+
+    <script>
+        function orderFood(item, price) {
+            document.getElementById("orderDetails").innerText = `You ordered: ${item} - $${price}`;
+            alert("Order placed successfully!");
+        }
+    </script>
+</body>
+</html>
